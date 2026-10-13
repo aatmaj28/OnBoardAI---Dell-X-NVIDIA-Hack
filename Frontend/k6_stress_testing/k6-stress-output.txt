@@ -1668,7 +1668,7 @@ time="2026-02-23T13:15:30-05:00" level=info msg="CHAT OK: VU=12 model=remote-bla
 running (7m24.0s), 01/50 VUs, 316 complete and 14 interrupted iterations
 default ↓ [ 100% ] 36/50 VUs  7m0s
 time="2026-02-23T13:15:31-05:00" level=info msg="\n============================================================" source=console
-time="2026-02-23T13:15:31-05:00" level=info msg="  LearnBOT Load Test Results" source=console
+time="2026-02-23T13:15:31-05:00" level=info msg="  OnBoardAI Load Test Results" source=console
 time="2026-02-23T13:15:31-05:00" level=info msg="============================================================" source=console
 time="2026-02-23T13:15:31-05:00" level=info msg="  Login:         avg=235ms  p95=1720ms" source=console
 time="2026-02-23T13:15:31-05:00" level=info msg="  Chat (total):  avg=31451ms  p95=49754ms  max=52517ms" source=console

@@ -1,7 +1,7 @@
 {
-  "name": "og-learnbot",
+  "name": "onboardai",
   "private": true,
-  "description": "LearnBOT monorepo: Next.js Frontend + Flask Backend",
+  "description": "OnBoardAI: local onboarding assistant for new developers (Dell x NVIDIA AI Hackathon, Boston 2026)",
   "scripts": {
     "setup": "bash scripts/setup.sh",
     "dev": "npm run infra:up && npm run dev:apps",

@@ -9,7 +9,7 @@ node_modules/
 .venv/
 __pycache__/
 
-# LearnBOT FastAPI backend runtime data (see CONTRACTS.md › Data)
+# OnBoardAI FastAPI backend runtime data (see CONTRACTS.md › Data)
 Backend/data/repos/
 Backend/data/index/
 Backend/data/events.jsonl

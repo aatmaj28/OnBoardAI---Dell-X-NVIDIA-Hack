@@ -1,5 +1,5 @@
 """
-Redis service for LearnBOT task management and real-time streaming.
+Redis service for OnBoardAI task management and real-time streaming.
 
 Two responsibilities:
 1. Task status storage: learnbot:task:<id> — lifecycle tracking (queued → processing → completed/failed)

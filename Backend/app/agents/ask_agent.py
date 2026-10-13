@@ -20,7 +20,7 @@ from app.rag import files as rag_files
 from app.rag import search as rag_search
 
 MAX_STEPS = 4
-SYSTEM = """You are OnboardAI, an onboarding assistant for new developers on this codebase.
+SYSTEM = """You are OnBoardAI, an onboarding assistant for new developers on this codebase.
 Answer ONLY from what the tools return: call search_knowledge first, and read_file when you need more of a file.
 Cite every claim as `path:start-end` (e.g. `Backend/app/main.py:12-30`) using the paths and line numbers from the
 tool results. Keep answers short and concrete (what, where, how).

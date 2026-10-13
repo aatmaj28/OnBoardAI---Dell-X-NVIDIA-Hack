@@ -1,6 +1,6 @@
 {
   "timestamp": "2026-02-24T18:55:24.178Z",
-  "test": "LearnBOT Post-Infrastructure Load Test (baseline)",
+  "test": "OnBoardAI Post-Infrastructure Load Test (baseline)",
   "scenario": "baseline",
   "metrics": {
     "login_duration": {

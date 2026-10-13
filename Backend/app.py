@@ -1,5 +1,5 @@
 """
-LearnBot Flask Backend
+OnBoardAI Flask Backend
 Main application entry point
 """
 from flask import Flask
@@ -85,7 +85,7 @@ except ImportError:
 
 @app.route("/")
 def index():
-    return {"status": "ok", "message": "LearnBot Flask API"}
+    return {"status": "ok", "message": "OnBoardAI Flask API"}
 
 def run_migrations():
     """Run database migrations on startup - creates tables if they don't exist"""

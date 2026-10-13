@@ -1,6 +1,6 @@
 {
   "timestamp": "2026-02-23T18:29:39.945Z",
-  "test": "LearnBOT Baseline Load Test",
+  "test": "OnBoardAI Baseline Load Test",
   "metrics": {
     "login_duration": {
       "max": 17823.0465,

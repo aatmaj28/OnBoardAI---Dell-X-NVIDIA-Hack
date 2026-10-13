@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy LearnBOT into the GB10's plan-a OpenShell sandbox (SETUP-GB10.md section 10) and run it on 127.0.0.1:8000.
+# Deploy OnBoardAI into the GB10's plan-a OpenShell sandbox (SETUP-GB10.md section 10) and run it on 127.0.0.1:8000.
 #
 #   ./deploy.sh              build the frontend, upload code + data, restart, health check
 #   SKIP_BUILD=1 ./deploy.sh reuse Frontend/out

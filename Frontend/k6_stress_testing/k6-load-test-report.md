@@ -1,4 +1,4 @@
-# LearnBOT Load Test Report — Final Comparison
+# OnBoardAI Load Test Report — Final Comparison
 
 **Date:** February 23, 2026 | **Tool:** k6 v1.6.1 | **Target:** `https://api.learnbot.dashlab.studio`
 
@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-Three load tests were run against LearnBOT's production API at **30, 50, and 100 concurrent users**, simulating the full student workflow (Login → Classes → Conversations → Chat → Cleanup).
+Three load tests were run against OnBoardAI's production API at **30, 50, and 100 concurrent users**, simulating the full student workflow (Login → Classes → Conversations → Chat → Cleanup).
 
 > [!CAUTION]
 > At **100 VUs**, chat responses hit **60 seconds** (the practical timeout limit), login degraded to **18 seconds**, and **64 VU iterations were interrupted** because they couldn't finish. The `login_duration` threshold was breached, causing the test to fail. The synchronous architecture is at its absolute limit.
@@ -137,9 +137,9 @@ graph LR
 
 | File | Description |
 |---|---|
-| [k6-baseline-report.json](file:///d:/DASH/Projects/LearnBOT%20-%20Neha/LearnBot-UI/k6-baseline-report.json) | 30-VU results |
-| [k6-stress-50vu-report.json](file:///d:/DASH/Projects/LearnBOT%20-%20Neha/LearnBot-UI/k6-stress-50vu-report.json) | 50-VU results |
-| [k6-stress-100vu-report.json](file:///d:/DASH/Projects/LearnBOT%20-%20Neha/LearnBot-UI/k6-stress-100vu-report.json) | 100-VU results |
-| [k6-output.txt](file:///d:/DASH/Projects/LearnBOT%20-%20Neha/LearnBot-UI/scripts/k6-output.txt) | 30-VU console log |
-| [k6-stress-output.txt](file:///d:/DASH/Projects/LearnBOT%20-%20Neha/LearnBot-UI/scripts/k6-stress-output.txt) | 50-VU console log |
-| [k6-stress-100vu-output.txt](file:///d:/DASH/Projects/LearnBOT%20-%20Neha/LearnBot-UI/scripts/k6-stress-100vu-output.txt) | 100-VU console log |
+| [k6-baseline-report.json](file:///d:/DASH/Projects/OnBoardAI%20-%20Neha/OnBoardAI-UI/k6-baseline-report.json) | 30-VU results |
+| [k6-stress-50vu-report.json](file:///d:/DASH/Projects/OnBoardAI%20-%20Neha/OnBoardAI-UI/k6-stress-50vu-report.json) | 50-VU results |
+| [k6-stress-100vu-report.json](file:///d:/DASH/Projects/OnBoardAI%20-%20Neha/OnBoardAI-UI/k6-stress-100vu-report.json) | 100-VU results |
+| [k6-output.txt](file:///d:/DASH/Projects/OnBoardAI%20-%20Neha/OnBoardAI-UI/scripts/k6-output.txt) | 30-VU console log |
+| [k6-stress-output.txt](file:///d:/DASH/Projects/OnBoardAI%20-%20Neha/OnBoardAI-UI/scripts/k6-stress-output.txt) | 50-VU console log |
+| [k6-stress-100vu-output.txt](file:///d:/DASH/Projects/OnBoardAI%20-%20Neha/OnBoardAI-UI/scripts/k6-stress-100vu-output.txt) | 100-VU console log |

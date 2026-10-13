@@ -1,4 +1,4 @@
-# Local development infrastructure for the LearnBOT monorepo.
+# Local development infrastructure for the legacy Flask stack (Postgres, Qdrant, Redis, RabbitMQ).
 # Starts everything Frontend/ and Backend/ need; the apps themselves run on the host
 # (see `npm run dev` in the root package.json).
 #

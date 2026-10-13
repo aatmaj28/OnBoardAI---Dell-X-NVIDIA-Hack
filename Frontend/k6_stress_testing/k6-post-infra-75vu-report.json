@@ -1,6 +1,6 @@
 {
   "timestamp": "2026-02-24T20:02:57.340Z",
-  "test": "LearnBOT Post-Infrastructure Load Test (midstress)",
+  "test": "OnBoardAI Post-Infrastructure Load Test (midstress)",
   "scenario": "midstress",
   "metrics": {
     "login_duration": {

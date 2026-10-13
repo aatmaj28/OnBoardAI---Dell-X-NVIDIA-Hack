@@ -1,4 +1,4 @@
-name: Deploy LearnBot Server
+name: Deploy OnBoardAI Server
 
 on:
   push:
@@ -484,6 +484,6 @@ jobs:
 
           if [ -n "${{ secrets.TEAMS_WEBHOOK_URL }}" ]; then
             curl -H "Content-Type: application/json" \
-                 -d '{"summary":"❌ LearnBot Server deployment failed ('${{ env.DEPLOY_ENV }}')"}' \
+                 -d '{"summary":"❌ OnBoardAI Server deployment failed ('${{ env.DEPLOY_ENV }}')"}' \
                  "${{ secrets.TEAMS_WEBHOOK_URL }}" || true
           fi

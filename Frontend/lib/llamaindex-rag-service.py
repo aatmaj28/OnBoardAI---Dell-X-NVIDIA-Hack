@@ -1,5 +1,5 @@
 """
-LlamaIndex-based RAG query service for LearnBot
+LlamaIndex-based RAG query service for OnBoardAI
 Replaces custom Python scripts with LlamaIndex query engine while preserving all existing logic
 """
 import os
@@ -2624,7 +2624,7 @@ Rules:
             
             if is_greeting:
                 # Friendly greeting response with introduction
-                teaching_response = """Hello! 👋 I'm LearnBOT, your AI learning assistant! I'm here to help you understand the course material step-by-step.
+                teaching_response = """Hello! 👋 I'm OnBoardAI, your AI learning assistant! I'm here to help you understand the course material step-by-step.
 
 I can help you with:
 📚 Explaining concepts from your textbook

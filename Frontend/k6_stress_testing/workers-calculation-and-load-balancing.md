@@ -1,4 +1,4 @@
-# LearnBOT — Workers Calculation & Load Balancing
+# OnBoardAI — Workers Calculation & Load Balancing
 
 **Date:** February 23, 2026  
 **Target:** 1,100 registered users → 700 concurrent → 200-300 active LLM requests  
@@ -84,7 +84,7 @@ Student clicks Send → Flask publishes to RabbitMQ (instantly, <200ms) → Work
 
 ```
 EssayBOT:  Worker → HTTP → Flask → process function    (Python↔Node.js bridge needed)
-LearnBOT:  Worker → process_query() directly            (both Python, no middleman)
+OnBoardAI:  Worker → process_query() directly            (both Python, no middleman)
 ```
 ~50ms faster per request, one less failure point.
 
@@ -102,7 +102,7 @@ LearnBOT:  Worker → process_query() directly            (both Python, no middl
 
 When all workers are busy:
 1. API responds **instantly** (<200ms) with `{ taskId, status: "queued" }`
-2. Student sees **loading spinner + "LearnBOT is thinking..."**
+2. Student sees **loading spinner + "OnBoardAI is thinking..."**
 3. Worker picks up task → chunks stream word-by-word
 4. Student **never sees frozen or error screen**
 
@@ -133,13 +133,13 @@ Our approach (threaded workers on self-hosted GPU) is standard for self-hosted L
 | **Caching** | Same question → cached response, no LLM call |
 | **GPU clusters** | Multiple GPUs behind load balancer |
 
-**For LearnBOT Phase 3:** Claude API fallback (once firewall egress approved) + potential second GPU/vLLM instance.
+**For OnBoardAI Phase 3:** Claude API fallback (once firewall egress approved) + potential second GPU/vLLM instance.
 
 ---
 
 ## Server Resource Impact
 
-| Resource | Total | LearnBOT Workers (10) | Impact |
+| Resource | Total | OnBoardAI Workers (10) | Impact |
 |---|---|---|---|
 | **RAM** | 124 GB | +350 MB | Negligible |
 | **CPU** | 32 cores | I/O bound (minimal CPU) | Negligible |

@@ -28,7 +28,7 @@ esac
 
 BRANCH="${1:-$DEFAULT_BRANCH}"
 
-echo "🚀 Deploying LearnBot Server (env=$NS, branch=$BRANCH) ..."
+echo "🚀 Deploying OnBoardAI Server (env=$NS, branch=$BRANCH) ..."
 
 # --- Git update ---
 git fetch --all
@@ -118,7 +118,7 @@ if [[ -n "$COMPOSE_FILE" ]]; then
     echo "⏳ Waiting for services to be ready..."
     sleep 5
     
-    # Verify Qdrant health (LearnBot uses host port 6335 per docker-compose)
+    # Verify Qdrant health (OnBoardAI uses host port 6335 per docker-compose)
     if curl -f http://localhost:6335/health >/dev/null 2>&1; then
         echo "✅ Qdrant is healthy (port 6335)"
     else
@@ -126,7 +126,7 @@ if [[ -n "$COMPOSE_FILE" ]]; then
         echo "   Check logs with: docker logs learnbot-qdrant"
     fi
 
-    # Verify RabbitMQ health (LearnBot uses host port 5673)
+    # Verify RabbitMQ health (OnBoardAI uses host port 5673)
     if curl -f http://localhost:15673/api/health/checks/alarms -u learnbot:learnbot123 >/dev/null 2>&1; then
         echo "✅ RabbitMQ is healthy (port 5673)"
     else

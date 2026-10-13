@@ -45,8 +45,8 @@ coverage/
 .yarn-integrity
 .npm/
 
-# Cloned LearnBot-Server (separate repo; do not commit into UI)
-LearnBot-Server/
+# Cloned OnBoardAI-Server (separate repo; do not commit into UI)
+OnBoardAI-Server/
 
 # User-uploaded files (persist on server, never track in git)
 resources/

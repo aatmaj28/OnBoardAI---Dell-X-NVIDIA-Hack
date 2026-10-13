@@ -80,7 +80,7 @@ function Shell({ children }: { children: React.ReactNode }) {
               <Bot className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h1 className="font-semibold text-gray-900">OnboardAI · {user.role === "manager" ? "Manager Portal" : "Employee Portal"}</h1>
+              <h1 className="font-semibold text-gray-900">OnBoardAI · {user.role === "manager" ? "Manager Portal" : "Employee Portal"}</h1>
               <p className="text-sm text-gray-600">Onboarding assistant</p>
             </div>
           </Link>

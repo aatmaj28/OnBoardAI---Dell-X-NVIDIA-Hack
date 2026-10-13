@@ -6,7 +6,7 @@
     "start_date": "2026-09-24",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "alex@learnbot.dev",
+    "email": "alex@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",
@@ -25,7 +25,7 @@
     "start_date": "2026-09-09",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "priya@learnbot.dev",
+    "email": "priya@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",
@@ -44,7 +44,7 @@
     "start_date": "2026-09-15",
     "manager": "Rahul Menon",
     "manager_type": "program",
-    "email": "marcus@learnbot.dev",
+    "email": "marcus@onboardai.dev",
     "learning_path": [
       "Frontend routing",
       "Voice button (WAV only)",
@@ -60,7 +60,7 @@
     "start_date": "2026-09-18",
     "manager": "Rahul Menon",
     "manager_type": "program",
-    "email": "sofia@learnbot.dev",
+    "email": "sofia@onboardai.dev",
     "learning_path": [
       "Chat API & citations",
       "Event logging",
@@ -77,7 +77,7 @@
     "start_date": "2026-09-12",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "jordan@learnbot.dev",
+    "email": "jordan@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",
@@ -94,7 +94,7 @@
     "start_date": "2026-09-21",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "aisha@learnbot.dev",
+    "email": "aisha@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",
@@ -113,7 +113,7 @@
     "start_date": "2026-09-06",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "ravi@learnbot.dev",
+    "email": "ravi@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",
@@ -130,7 +130,7 @@
     "start_date": "2026-09-25",
     "manager": "Rahul Menon",
     "manager_type": "program",
-    "email": "emma@learnbot.dev",
+    "email": "emma@onboardai.dev",
     "learning_path": [
       "Frontend routing",
       "Voice button (WAV only)",
@@ -146,7 +146,7 @@
     "start_date": "2026-09-14",
     "manager": "Rahul Menon",
     "manager_type": "program",
-    "email": "daniel@learnbot.dev",
+    "email": "daniel@onboardai.dev",
     "learning_path": [
       "Chat API & citations",
       "Event logging",
@@ -163,7 +163,7 @@
     "start_date": "2026-09-28",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "mei@learnbot.dev",
+    "email": "mei@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",
@@ -182,7 +182,7 @@
     "start_date": "2026-09-03",
     "manager": "Rahul Menon",
     "manager_type": "program",
-    "email": "lucas@learnbot.dev",
+    "email": "lucas@onboardai.dev",
     "learning_path": [
       "Frontend routing",
       "Voice button (WAV only)",
@@ -198,7 +198,7 @@
     "start_date": "2026-09-22",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "fatima@learnbot.dev",
+    "email": "fatima@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",
@@ -215,7 +215,7 @@
     "start_date": "2026-09-30",
     "manager": "Rahul Menon",
     "manager_type": "program",
-    "email": "noah@learnbot.dev",
+    "email": "noah@onboardai.dev",
     "learning_path": [
       "Chat API & citations",
       "Event logging",
@@ -232,7 +232,7 @@
     "start_date": "2026-09-19",
     "manager": "Dana Whitfield",
     "manager_type": "delivery",
-    "email": "hannah@learnbot.dev",
+    "email": "hannah@onboardai.dev",
     "learning_path": [
       "RAG ingestion & chunking",
       "Vector search",

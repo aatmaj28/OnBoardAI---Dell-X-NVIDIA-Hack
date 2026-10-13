@@ -1,6 +1,6 @@
-# LearnBot Backend
+# Legacy Flask backend
 
-Flask backend API for LearnBot.
+The original Flask API this project started from (`Backend/app.py`, `routes/`, `services/`). OnBoardAI itself runs on the FastAPI app in `Backend/app/`; see the root README.
 
 ## Setup
 
@@ -53,7 +53,7 @@ See `.env.example` for all required environment variables.
 
 ## Frontend
 
-The frontend is in a separate repository: `LearnBot-Frontend`
+The frontend is in `Frontend/` in this repository.
 
 Make sure CORS is configured to allow your frontend origin.
 

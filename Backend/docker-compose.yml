@@ -15,7 +15,7 @@ services:
     # No healthcheck: qdrant/qdrant image does not include curl (see GitHub #4250)
     restart: unless-stopped
 
-  # RabbitMQ Message Broker (dedicated to LearnBot)
+  # RabbitMQ Message Broker (dedicated to OnBoardAI)
   # Port 5673 to avoid conflict with EssayBot's RabbitMQ on 5672
   rabbitmq:
     image: rabbitmq:3.12-management

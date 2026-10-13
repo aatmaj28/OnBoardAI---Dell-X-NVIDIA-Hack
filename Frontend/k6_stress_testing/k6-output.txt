@@ -1332,7 +1332,7 @@ default ↓ [ 100% ] 14/30 VUs  6m0s
 running (6m13.0s), 02/30 VUs, 197 complete and 0 interrupted iterations
 default ↓ [ 100% ] 14/30 VUs  6m0s
 time="2026-02-23T12:51:02-05:00" level=info msg="\n============================================================" source=console
-time="2026-02-23T12:51:02-05:00" level=info msg="  LearnBOT Load Test Results" source=console
+time="2026-02-23T12:51:02-05:00" level=info msg="  OnBoardAI Load Test Results" source=console
 time="2026-02-23T12:51:02-05:00" level=info msg="============================================================" source=console
 time="2026-02-23T12:51:02-05:00" level=info msg="  Login:         avg=35ms  p95=55ms" source=console
 time="2026-02-23T12:51:02-05:00" level=info msg="  Chat (total):  avg=23425ms  p95=33432ms  max=36128ms" source=console

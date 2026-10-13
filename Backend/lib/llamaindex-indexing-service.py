@@ -1,5 +1,5 @@
 """
-LlamaIndex-based indexing service for LearnBot
+LlamaIndex-based indexing service for OnBoardAI
 Uses Qdrant for vector storage (migrated from ChromaDB for better performance and filtering)
 """
 import sys

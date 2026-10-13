@@ -1,5 +1,5 @@
 """
-LlamaIndex-based RAG query service for LearnBot
+LlamaIndex-based RAG query service for OnBoardAI
 Replaces custom Python scripts with LlamaIndex query engine while preserving all existing logic
 """
 import os
@@ -114,7 +114,7 @@ OPENROUTER_MODEL = os.getenv('OPENROUTER_MODEL', 'anthropic/claude-sonnet-4.6')
 # Short system prompt for Blackwell (Gemma) fallback when prompt was built for Claude (long)
 # IMPORTANT: Keep this brief (Blackwell/vLLM is sensitive to long prompts in our deployment).
 BLACKWELL_SHORT_SYSTEM = (
-    "You are LearnBot, an onboarding assistant for new employees. Answer questions using ONLY the "
+    "You are OnBoardAI, an onboarding assistant for new employees. Answer questions using ONLY the "
     "company documents provided as context.\n"
     "Cite every fact with the file name EXACTLY as shown in its \"[Source N - ...]\" header, in square brackets.\n"
     "If the context does not contain the answer, say so plainly: \"I couldn't find that in the "
@@ -124,7 +124,7 @@ BLACKWELL_SHORT_SYSTEM = (
 # Compressed TA + formatting for Blackwell when user selects Gemma (remote-blackwell) - short enough for vLLM.
 # NOTE: We keep mode-specific variants so faculty TA mode (lenient/normal/strict) still applies for Gemma/Blackwell.
 BLACKWELL_COMPRESSED_SYSTEMS = {
-    "lenient": """You are LearnBot, an onboarding assistant for new employees. Answer their questions directly and warmly from the company documents.
+    "lenient": """You are OnBoardAI, an onboarding assistant for new employees. Answer their questions directly and warmly from the company documents.
 
 STYLE:
 - Give the answer first, in plain language. No quizzing, no withholding.
@@ -140,7 +140,7 @@ SOURCE RULES (apply always):
 GREETINGS: If the message is only a greeting, reply in 1-2 sentences and ask what they'd like to know. Do not list your capabilities.
 
 FORMATTING: Use Markdown. **Bold** key terms. Use `-` for bullets and `1.` for steps. Use pipe tables for tabular data. Keep answers short — 2-4 sentences unless they ask for detail.""",
-    "normal": """You are LearnBot, an onboarding assistant for new employees. Answer their questions from the company documents, then check the key point landed.
+    "normal": """You are OnBoardAI, an onboarding assistant for new employees. Answer their questions from the company documents, then check the key point landed.
 
 STYLE:
 - Give the answer first, in plain language. Never withhold it.
@@ -156,7 +156,7 @@ SOURCE RULES (apply always):
 GREETINGS: If the message is only a greeting, reply in 1-2 sentences and ask what they'd like to know. Do not list your capabilities.
 
 FORMATTING: Use Markdown. **Bold** key terms. Use `-` for bullets and `1.` for steps. Use pipe tables for tabular data. Keep answers short — 2-4 sentences unless they ask for detail.""",
-    "strict": """You are LearnBot, an onboarding assistant for new employees in a regulated environment. Accuracy and traceability matter more than speed.
+    "strict": """You are OnBoardAI, an onboarding assistant for new employees in a regulated environment. Accuracy and traceability matter more than speed.
 
 STYLE:
 - Give the answer first, in plain language. Never withhold it.
@@ -192,7 +192,7 @@ BLACKWELL_DEEP_THINKING_SUFFIX = (
     "and keep citing each fact."
 )
 # Single system prompt for Syllabus/Schedule chat. No TA mode, no checkpoints — only this prompt guides responses.
-BLACKWELL_SYLLABUS_SYSTEM = """You are LearnBot, an onboarding assistant helping new employees with company policies and schedules.
+BLACKWELL_SYLLABUS_SYSTEM = """You are OnBoardAI, an onboarding assistant helping new employees with company policies and schedules.
 
 Your role: Answer questions using ONLY the provided company documents. Do not use general knowledge; stick to what is in the sources.
 
@@ -210,7 +210,7 @@ FORMATTING: Use Markdown. **Bold** key terms. Use `-` for bullets. Use pipe tabl
 CATEGORY_SYSTEM_PROMPTS = {
     "syllabus": BLACKWELL_SYLLABUS_SYSTEM,
 
-    "announcements": """You are LearnBot, an onboarding assistant helping employees with company announcements and updates.
+    "announcements": """You are OnBoardAI, an onboarding assistant helping employees with company announcements and updates.
 
 Your role: Answer questions using ONLY the provided announcements context. Do not use general knowledge.
 
@@ -222,7 +222,7 @@ Rules:
 - Use **bold** for key terms. Keep answers to 2-4 sentences unless more detail is asked for.
 - Cover policy changes, deadlines, schedule changes and company updates. Lead with the date when one is given.""",
 
-    "modules": """You are LearnBot, an onboarding assistant helping employees navigate their onboarding programme and training content.
+    "modules": """You are OnBoardAI, an onboarding assistant helping employees navigate their onboarding programme and training content.
 
 Your role: Answer questions using ONLY the provided programme context. Do not use general knowledge.
 
@@ -238,7 +238,7 @@ CRITICAL — Lists and links:
 - For each item include its title, owner/source and any URL, as a clickable Markdown link.
 - NEVER summarise or omit items from a list. If the context lists 3 items, list all 3.""",
 
-    "discussions": """You are LearnBot, an onboarding assistant helping employees with team discussions and Q&A threads.
+    "discussions": """You are OnBoardAI, an onboarding assistant helping employees with team discussions and Q&A threads.
 
 Your role: Answer questions using ONLY the provided discussions context. Do not use general knowledge.
 
@@ -250,7 +250,7 @@ Rules:
 - Use **bold** for key terms. Keep answers to 2-4 sentences unless more detail is asked for.
 - Cover what was discussed, what was decided, and who to follow up with when the documents say.""",
 
-    "grades": """You are LearnBot, an onboarding assistant helping employees understand assessments and progress requirements.
+    "grades": """You are OnBoardAI, an onboarding assistant helping employees understand assessments and progress requirements.
 
 Your role: Answer questions using ONLY the provided assessment context. Do not use general knowledge.
 
@@ -262,7 +262,7 @@ Rules:
 - Use **bold** for key terms. Keep answers to 2-4 sentences unless more detail is asked for.
 - Cover pass marks, required training, completion criteria and deadlines. State exact figures when the documents give them.""",
 
-    "assignments": """You are LearnBot, an onboarding assistant helping employees with their onboarding tasks.
+    "assignments": """You are OnBoardAI, an onboarding assistant helping employees with their onboarding tasks.
 
 Your role: Answer questions using ONLY the provided task context. Do not use general knowledge.
 
@@ -274,7 +274,7 @@ Rules:
 - Use **bold** for key terms. Keep answers to 2-4 sentences unless more detail is asked for.
 - Cover what the task requires, its deadline, how to complete it and who signs it off.""",
 
-    "all": """You are LearnBot, an onboarding assistant helping employees across every company document — policies, tasks, announcements, training programmes and team discussions.
+    "all": """You are OnBoardAI, an onboarding assistant helping employees across every company document — policies, tasks, announcements, training programmes and team discussions.
 
 Your role: Answer questions using ONLY the provided company documents. Do not use general knowledge.
 
@@ -2306,7 +2306,7 @@ def call_llm_with_fallback(prompt, system_prompt, preferred_model, attachments=N
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {OPENROUTER_API_KEY}",
                     "HTTP-Referer": "https://learnbot.dashlab.studio",
-                    "X-Title": "LearnBOT",
+                    "X-Title": "OnBoardAI",
                 },
                 json={
                     "model": OPENROUTER_MODEL,
@@ -2923,7 +2923,7 @@ def call_llm_with_streaming(prompt, system_prompt, preferred_model, request_id, 
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {OPENROUTER_API_KEY}",
                     "HTTP-Referer": "https://learnbot.dashlab.studio",
-                    "X-Title": "LearnBOT",
+                    "X-Title": "OnBoardAI",
                 },
                 json={
                     "model": OPENROUTER_MODEL,
@@ -3729,7 +3729,7 @@ def process_query(request_data: Dict[str, Any], stream_callback=None) -> Dict[st
 
             if not teaching_response:
                 # Ultimate fallback if LLM also fails
-                teaching_response = "Hi! I'm LearnBOT. I'm having a bit of trouble responding right now — please try again in a moment."
+                teaching_response = "Hi! I'm OnBoardAI. I'm having a bit of trouble responding right now — please try again in a moment."
                 model_used = "fallback"
                 llm_time_ms = int(llm_time * 1000)
                 time_taken = llm_time_ms

@@ -76,7 +76,7 @@ function LoginContent() {
       const message = err instanceof Error ? err.message : "An error occurred. Please try again."
       setError(
         message.includes("Cannot connect") || message === "Failed to fetch"
-          ? "Cannot reach the OnboardAI server. Check that it's running."
+          ? "Cannot reach the OnBoardAI server. Check that it's running."
           : message
       )
       setLoading(false)
@@ -125,7 +125,7 @@ function LoginContent() {
               <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center">
                 <Bot className="h-8 w-8 text-white" />
               </div>
-              <span className="text-3xl font-bold text-white">OnboardAI</span>
+              <span className="text-3xl font-bold text-white">OnBoardAI</span>
             </div>
             {/* Separator Line */}
             <div className="w-16 h-0.5 bg-white mb-6"></div>
@@ -318,7 +318,7 @@ function LoginContent() {
               <p className="text-sm text-gray-600">
                 Accounts are created by your manager. Demo:{" "}
                 <span className="font-mono text-gray-800">
-                  {role === "faculty" ? "dana@learnbot.dev / manager123" : "alex@learnbot.dev / employee123"}
+                  {role === "faculty" ? "dana@onboardai.dev / manager123" : "alex@onboardai.dev / employee123"}
                 </span>
               </p>
             </div>

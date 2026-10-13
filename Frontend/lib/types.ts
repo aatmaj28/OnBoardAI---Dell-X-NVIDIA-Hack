@@ -1,4 +1,4 @@
-// Database types and interfaces (LearnBot UI)
+// Database types and interfaces (OnBoardAI UI)
 
 export type UserRole = "student" | "faculty"
 

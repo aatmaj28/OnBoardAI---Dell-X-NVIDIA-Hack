@@ -1,4 +1,4 @@
-// PM2 Ecosystem Configuration for LearnBot UI (repo root)
+// PM2 Ecosystem Configuration for OnBoardAI UI (repo root)
 // Works for BOTH envs (prod & uat) by NAMESPACE when started.
 module.exports = {
   apps: [

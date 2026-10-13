@@ -1,5 +1,5 @@
 /**
- * LearnBOT k6 Load Test — Baseline (Step 1)
+ * OnBoardAI k6 Load Test — Baseline (Step 1)
  *
  * Simulates the full student flow:
  *   Login → List classes → Load conversations → Send chat message
@@ -291,7 +291,7 @@ export default function () {
 export function handleSummary(data) {
     const summary = {
         timestamp: new Date().toISOString(),
-        test: 'LearnBOT Baseline Load Test',
+        test: 'OnBoardAI Baseline Load Test',
         metrics: {},
     };
 
@@ -316,7 +316,7 @@ export function handleSummary(data) {
 
     // Print human-readable summary to console
     console.log('\n' + '='.repeat(60));
-    console.log('  LearnBOT Load Test Results');
+    console.log('  OnBoardAI Load Test Results');
     console.log('='.repeat(60));
 
     if (summary.metrics.login_duration) {

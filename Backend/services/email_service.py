@@ -28,9 +28,9 @@ def send_verification_email(email: str, otp: str, name: str) -> dict:
 ╠══════════════════════════════════════════════════════════════╣
 ║ To: {email:<55}║
 ║                                                              ║
-║ Subject: LearnBOT Portal - Email Verification               ║
+║ Subject: OnBoardAI Portal - Email Verification               ║
 ║                                                              ║
-║ Welcome to LearnBOT Portal!                                 ║
+║ Welcome to OnBoardAI Portal!                                 ║
 ║                                                              ║
 ║ Hello {name:<51}║
 ║                                                              ║
@@ -46,7 +46,7 @@ def send_verification_email(email: str, otp: str, name: str) -> dict:
 ║ If you didn't request this verification, please ignore      ║
 ║ this email.                                                  ║
 ║                                                              ║
-║ © 2026 LearnBot                                              ║
+║ © 2026 OnBoardAI                                              ║
 ╚══════════════════════════════════════════════════════════════╝
         """)
         print('⚠️  Gmail credentials not configured. Email logged to console only.')
@@ -56,8 +56,8 @@ def send_verification_email(email: str, otp: str, name: str) -> dict:
     try:
         # Create message
         msg = MIMEMultipart('alternative')
-        msg['Subject'] = 'LearnBOT Portal - Email Verification'
-        msg['From'] = f'"LearnBOT Portal" <{gmail_user}>'
+        msg['Subject'] = 'OnBoardAI Portal - Email Verification'
+        msg['From'] = f'"OnBoardAI Portal" <{gmail_user}>'
         msg['To'] = email
         
         # HTML content
@@ -79,11 +79,11 @@ def send_verification_email(email: str, otp: str, name: str) -> dict:
 <body>
   <div class="container">
     <div class="header">
-      <h1>LearnBOT Portal</h1>
+      <h1>OnBoardAI Portal</h1>
       <p>Email Verification</p>
     </div>
     <p>Hello <strong>{name}</strong>,</p>
-    <p>Welcome to <strong>LearnBot</strong>!</p>
+    <p>Welcome to <strong>OnBoardAI</strong>!</p>
     <p>Please use the verification code below to complete your registration:</p>
     <div class="otp-box">
       <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">Your verification code is:</p>
@@ -94,7 +94,7 @@ def send_verification_email(email: str, otp: str, name: str) -> dict:
       <p style="margin: 0;"><strong>⚠️ Security Note:</strong> If you didn't request this verification, please ignore this email. Never share this code with anyone.</p>
     </div>
     <div class="footer">
-      <p>© 2026 LearnBot</p>
+      <p>© 2026 OnBoardAI</p>
       <p>This is an automated message, please do not reply to this email.</p>
     </div>
   </div>
@@ -102,7 +102,7 @@ def send_verification_email(email: str, otp: str, name: str) -> dict:
 </html>
         """
 
-        text_content = f"""Welcome to LearnBot!
+        text_content = f"""Welcome to OnBoardAI!
 
 Hello {name},
 
@@ -112,7 +112,7 @@ This code expires in 10 minutes.
 
 If you didn't request this verification, please ignore this email.
 
-© 2026 LearnBot
+© 2026 OnBoardAI
         """
         
         part1 = MIMEText(text_content, 'plain')
@@ -149,8 +149,8 @@ def send_invitation_email(email: str, class_name: str, faculty_name: str, regist
     
     try:
         msg = MIMEMultipart('alternative')
-        msg['Subject'] = f"Action Required: Register for {class_name} on LearnBOT"
-        msg['From'] = f'"LearnBOT Portal" <{gmail_user}>'
+        msg['Subject'] = f"Action Required: Register for {class_name} on OnBoardAI"
+        msg['From'] = f'"OnBoardAI Portal" <{gmail_user}>'
         msg['To'] = email
         
         html_content = f"""
@@ -170,11 +170,11 @@ def send_invitation_email(email: str, class_name: str, faculty_name: str, regist
 <body>
   <div class="container">
     <div class="header">
-      <h1>LearnBOT Portal</h1>
+      <h1>OnBoardAI Portal</h1>
       <p style="margin: 0; color: #666; font-size: 14px;">Registration Required</p>
     </div>
     <p>Hello,</p>
-    <p>Your manager <strong>{faculty_name}</strong> has invited you to join the sector <strong>{class_name}</strong> on LearnBot!</p>
+    <p>Your manager <strong>{faculty_name}</strong> has invited you to join the sector <strong>{class_name}</strong> on OnBoardAI!</p>
     <p>To access your sector materials, please register your account below:</p>
     <div style="text-align: center;">
       <a href="{registration_url}" class="button">Register Now</a>
@@ -185,7 +185,7 @@ def send_invitation_email(email: str, class_name: str, faculty_name: str, regist
       <p style="margin: 0;"><strong>Important:</strong> Please use this same email address (<strong>{email}</strong>) when you register so you are added to the sector automatically.</p>
     </div>
     <div class="footer">
-      <p>© 2026 LearnBot</p>
+      <p>© 2026 OnBoardAI</p>
       <p>This is an automated message, please do not reply to this email.</p>
     </div>
   </div>
@@ -193,18 +193,18 @@ def send_invitation_email(email: str, class_name: str, faculty_name: str, regist
 </html>
         """
         
-        text_content = f"""Welcome to LearnBot!
+        text_content = f"""Welcome to OnBoardAI!
 
 Hello,
 
-Your manager {faculty_name} has invited you to join the sector {class_name} on LearnBot!
+Your manager {faculty_name} has invited you to join the sector {class_name} on OnBoardAI!
 
 To access your sector materials, please register your account below:
 {registration_url}
 
 Important: Please use this same email address ({email}) when you register so you are added to the sector automatically.
 
-© 2026 LearnBot
+© 2026 OnBoardAI
         """
         
         part1 = MIMEText(text_content, 'plain')

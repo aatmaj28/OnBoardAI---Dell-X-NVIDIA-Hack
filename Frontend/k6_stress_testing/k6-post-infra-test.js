@@ -1,5 +1,5 @@
 /**
- * LearnBOT k6 Post-Infrastructure Load Test
+ * OnBoardAI k6 Post-Infrastructure Load Test
  *
  * Tests the NEW RabbitMQ async architecture:
  *   Login → List classes → Load conversations → Send chat (queue) → Poll status
@@ -397,7 +397,7 @@ export default function () {
 export function handleSummary(data) {
     const summary = {
         timestamp: new Date().toISOString(),
-        test: `LearnBOT Post-Infrastructure Load Test (${SCENARIO})`,
+        test: `OnBoardAI Post-Infrastructure Load Test (${SCENARIO})`,
         scenario: SCENARIO,
         metrics: {},
     };
@@ -426,7 +426,7 @@ export function handleSummary(data) {
 
     // Print human-readable summary to console
     console.log('\n' + '='.repeat(70));
-    console.log(`  LearnBOT Post-Infrastructure Load Test — ${SCENARIO.toUpperCase()}`);
+    console.log(`  OnBoardAI Post-Infrastructure Load Test — ${SCENARIO.toUpperCase()}`);
     console.log('='.repeat(70));
 
     if (summary.metrics.login_duration) {

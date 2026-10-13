@@ -1,4 +1,4 @@
-// PM2 Ecosystem Configuration for LearnBot Backend (Flask)
+// PM2 Ecosystem Configuration for OnBoardAI Backend (Flask)
 // Works for BOTH envs (prod & uat) just by how you start it.
 module.exports = {
   apps: [
@@ -49,7 +49,7 @@ module.exports = {
       listen_timeout: 10000,
     },
 
-    // ── LearnBOT Chat Workers (thin HTTP dispatchers) ──────────────
+    // ── OnBoardAI Chat Workers (thin HTTP dispatchers) ──────────────
     // 5 workers × 10 threads = 50 concurrent HTTP dispatches to Flask
     {
       name:

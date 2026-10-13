@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-LearnBOT Chat Worker — Thin HTTP Dispatcher
+OnBoardAI Chat Worker — Thin HTTP Dispatcher
 
 Consumes chat tasks from RabbitMQ (learnbot.chat.queue) and dispatches them
 to the Flask internal endpoint via HTTP. Flask handles the actual RAG processing,
@@ -145,7 +145,7 @@ def process_chat_task(task_id: str, request_data: dict) -> None:
 # Worker (RabbitMQ Consumer)
 # ---------------------------------------------------------------------------
 
-class LearnBotWorker:
+class OnBoardAIWorker:
     """
     RabbitMQ consumer with ThreadPoolExecutor for concurrent HTTP dispatches.
     
@@ -303,7 +303,7 @@ class LearnBotWorker:
 
 def main():
     pid = os.getpid()
-    print(f"[WORKER] Starting LearnBOT worker (PID={pid}, max_concurrent={MAX_CONCURRENT})", flush=True)
+    print(f"[WORKER] Starting OnBoardAI worker (PID={pid}, max_concurrent={MAX_CONCURRENT})", flush=True)
     print(f"[WORKER] Mode: HTTP dispatch to Flask (EssayBot pattern)", flush=True)
     print(f"[WORKER] Flask URL: {FLASK_INTERNAL_URL}", flush=True)
     
@@ -325,7 +325,7 @@ def main():
         print("[WORKER] (This is OK if Flask starts after workers — will retry on first task)", flush=True)
     
     # Start worker
-    worker = LearnBotWorker()
+    worker = OnBoardAIWorker()
     
     # Graceful shutdown on SIGTERM (PM2 sends this)
     def handle_signal(signum, frame):

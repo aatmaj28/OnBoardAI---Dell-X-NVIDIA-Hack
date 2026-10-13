@@ -1,5 +1,5 @@
 """
-RabbitMQ service for LearnBOT task publishing.
+RabbitMQ service for OnBoardAI task publishing.
 
 Publishes chat tasks to the 'learnbot.chat.queue' queue via the 'learnbot.chat' exchange.
 Uses the dedicated 'learnbot' RabbitMQ user with restricted permissions (learnbot\\..*).

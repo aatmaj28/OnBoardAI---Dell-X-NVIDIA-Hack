@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Check current PostgreSQL connection usage. Run from LearnBot-Backend with env loaded:
-  cd LearnBot-Backend && python scripts/check_db_connections.py
+Check current PostgreSQL connection usage. Run from OnBoardAI-Backend with env loaded:
+  cd OnBoardAI-Backend && python scripts/check_db_connections.py
 
 Useful when debugging "Fatal: too many clients" - shows how many connections
-each application_name is using so you can see if LearnBOT is leaking or
+each application_name is using so you can see if OnBoardAI is leaking or
 if worker count × pool size is too high.
 """
 import os

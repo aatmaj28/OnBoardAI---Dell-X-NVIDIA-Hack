@@ -20,7 +20,7 @@ ANCHOR = date(2026, 10, 3)
 FAKE_DIR = Path(__file__).resolve().parent
 DATA_DIR = FAKE_DIR.parent
 
-# Topics map onto the demo repository (LearnBOT itself). `trap` marks doc sections
+# Topics map onto the demo repository (OnBoardAI itself). `trap` marks doc sections
 # that most people misread -> they should surface in "Docs to improve".
 TOPICS = [
     {"topic": "RAG ingestion & chunking", "source_type": "code", "path": "Backend/app/rag/ingest.py",
@@ -152,7 +152,7 @@ def main():
         employees.append({
             "id": emp_id, "name": name, "role": role, "start_date": start.isoformat(),
             "manager": manager, "manager_type": manager_type,
-            "email": f"{name.split()[0].lower()}@learnbot.dev",
+            "email": f"{name.split()[0].lower()}@onboardai.dev",
             "learning_path": ROLE_TOPICS[role],
         })
         my_topics = ROLE_TOPICS[role]

@@ -1,4 +1,4 @@
-// RAG Service for LearnBot - Custom LLM Integration
+// RAG Service for OnBoardAI - Custom LLM Integration
 import { spawn, ChildProcess } from 'child_process'
 import { EventEmitter } from 'events'
 import path from 'path'
@@ -432,7 +432,7 @@ const getVectorStorePath = async (classId?: string, chatType: 'class_material' |
 
 // Simplified system prompt for syllabus/schedule queries
 const getSyllabusSystemPrompt = (): string => {
-  return `You are LearnBOT, an AI assistant helping students with course syllabus and schedule information.
+  return `You are OnBoardAI, an AI assistant helping students with course syllabus and schedule information.
 
 Your role is to:
 - Answer questions about class schedules, assignments, deadlines, and course structure
@@ -2599,7 +2599,7 @@ Rules:
                     # Determine intent based on detection
                     if prompt_extraction_attempt:
                         intent = "prompt_extraction"
-                        teaching_query = "I'm LearnBOT, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
+                        teaching_query = "I'm OnBoardAI, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
                     elif bypass_attempt:
                         intent = "bypass_attempt"
                         teaching_query = query
@@ -2659,7 +2659,7 @@ Rules:
                 # Determine intent based on detection
                 if prompt_extraction_attempt:
                     intent = "prompt_extraction"
-                    teaching_query = "I'm LearnBOT, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
+                    teaching_query = "I'm OnBoardAI, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
                 elif bypass_attempt:
                     intent = "bypass_attempt"
                     teaching_query = query
@@ -2733,7 +2733,7 @@ Rules:
             # Determine intent based on detection
             if prompt_extraction_attempt:
                 intent = "prompt_extraction"
-                teaching_query = "I'm LearnBOT, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
+                teaching_query = "I'm OnBoardAI, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
             elif bypass_attempt:
                 intent = "bypass_attempt"
                 teaching_query = query
@@ -3157,9 +3157,9 @@ NOT LEAKED:
                             print(f"⚠️ SECURITY ISSUE DETECTED ({', '.join(issue_type)}): {leak_result.get('reason', 'No reason provided')}", file=sys.stderr)
                             # Handle different types of security issues
                             if prompt_leak_detected:
-                                teaching_response = "I'm LearnBOT, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
+                                teaching_response = "I'm OnBoardAI, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
                             elif role_change_detected:
-                                teaching_response = "I'm LearnBOT, your teaching assistant. Let's focus on learning through the checkpoint system. What can I help you with?"
+                                teaching_response = "I'm OnBoardAI, your teaching assistant. Let's focus on learning through the checkpoint system. What can I help you with?"
                             elif leak_detected:
                                 # Context-aware replacement based on checkpoint state
                                 if not checkpoint_state.get('checkpoint_1_passed', False):
@@ -3226,10 +3226,10 @@ NOT LEAKED:
                         # Handle different types of security issues
                         if prompt_leak_detected:
                             print(f"⚠️ PROMPT LEAK DETECTED via keyword fallback", file=sys.stderr)
-                            teaching_response = "I'm LearnBOT, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
+                            teaching_response = "I'm OnBoardAI, your teaching assistant. I'm here to help you learn through our checkpoint system. What problem are you working on?"
                         elif role_change_detected:
                             print(f"⚠️ ROLE CHANGE DETECTED via keyword fallback", file=sys.stderr)
-                            teaching_response = "I'm LearnBOT, your teaching assistant. Let's focus on learning through the checkpoint system. What can I help you with?"
+                            teaching_response = "I'm OnBoardAI, your teaching assistant. Let's focus on learning through the checkpoint system. What can I help you with?"
                         elif leak_detected:
                             print(f"⚠️ ANSWER LEAK DETECTED via keyword fallback", file=sys.stderr)
                             # Context-aware replacement

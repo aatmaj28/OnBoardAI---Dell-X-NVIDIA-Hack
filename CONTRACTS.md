@@ -1,4 +1,4 @@
-# LearnBOT CONTRACTS (frozen; changes only through Person 1 / AJ)
+# OnBoardAI CONTRACTS (frozen; changes only through Person 1 / AJ)
 
 ## Branches
 Integration branch: AJ (created from ui). Teammates branch from AJ: p2-learn-manager, p3-voice-team. AJ merges them at the end.

@@ -1,4 +1,4 @@
-// OnboardAI API client for the P1 endpoints (see CONTRACTS.md › API).
+// OnBoardAI API client for the P1 endpoints (see CONTRACTS.md › API).
 import { getSession, type SessionUser } from "./session"
 
 // Same-origin in prod (FastAPI serves the static build at /). When running `next dev`, set
